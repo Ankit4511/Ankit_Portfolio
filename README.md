@@ -1,14 +1,14 @@
- 🚀 Ankit Kumar Suthar - Developer Portfolio
+# 🚀 Ankit Kumar Suthar - Developer Portfolio
 
 A modern, responsive, and interactive developer portfolio built with React.js and Tailwind CSS to showcase my projects, skills, certifications, GitHub statistics, and professional experience.
 
- 🌐 Live Demo
+## 🌐 Live Demo
 
 🔗 https://ankitsutharportfolio.vercel.app/
 
 ---
 
- ✨ Features
+## ✨ Features
 
 * Modern Dark Theme UI
 * Fully Responsive Design
@@ -30,9 +30,9 @@ A modern, responsive, and interactive developer portfolio built with React.js an
 
 ---
 
- 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
- Frontend
+### Frontend
 
 * React.js
 * JavaScript (ES6+)
@@ -40,7 +40,7 @@ A modern, responsive, and interactive developer portfolio built with React.js an
 * React Router DOM
 * Framer Motion
 
- UI & Visualization
+### UI & Visualization
 
 * React Icons
 * Recharts
@@ -48,14 +48,14 @@ A modern, responsive, and interactive developer portfolio built with React.js an
 * Gradient Effects
 * Responsive Layouts
 
- Services
+### Services
 
 * EmailJS
 * Vercel Deployment
 
 ---
 
- 📂 Project Structure
+## 📂 Project Structure
 
 ```bash
 src/
@@ -72,9 +72,9 @@ src/
 
 ---
 
- 📌 Featured Projects
+## 📌 Featured Projects
 
- 📊 LeetMetric App
+### 📊 LeetMetric App
 
 Track and visualize LeetCode progress with detailed statistics and interactive charts.
 
@@ -83,7 +83,7 @@ React.js, Tailwind CSS, Chart.js
 
 ---
 
- 📚 StudySync
+### 📚 StudySync
 
 Educational platform focused on study management and productivity enhancement.
 
@@ -92,7 +92,7 @@ React.js, Tailwind CSS, Node.js, MongoDB
 
 ---
 
- 🏎️ McLaren Landing Page
+### 🏎️ McLaren Landing Page
 
 Luxury-inspired responsive landing page with modern UI and smooth interactions.
 
@@ -101,7 +101,7 @@ HTML5, CSS3, JavaScript
 
 ---
 
- 📈 Portfolio Highlights
+## 📈 Portfolio Highlights
 
 * 5+ Projects
 * 2+ Internships
@@ -112,7 +112,7 @@ HTML5, CSS3, JavaScript
 
 ---
 
- 📬 Contact
+## 📬 Contact
 
 **Ankit Kumar Suthar**
 
@@ -126,7 +126,7 @@ HTML5, CSS3, JavaScript
 
 ---
 
- ⭐ Installation
+## ⭐ Installation
 
 ```bash
 git clone https://github.com/Ankit4511/your-repository.git
@@ -140,7 +140,7 @@ npm run dev
 
 ---
 
- 🚀 Deployment
+## 🚀 Deployment
 
 This portfolio is deployed on Vercel.
 
@@ -150,4 +150,4 @@ npm run build
 
 ---
 
- If you like this project, don't forget to ⭐ the repository.
+### If you like this project, don't forget to ⭐ the repository.
