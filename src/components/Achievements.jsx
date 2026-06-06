@@ -1,6 +1,8 @@
 import achievements from "../data/achievements";
 import AchievementCard from "./AchievementCard";
 import { GrAchievement } from "react-icons/gr";
+import MobileAchievementCard from "./MobileAchievementCard";
+
 
 function Achievements() {
   return (
@@ -10,7 +12,9 @@ function Achievements() {
         Achievements
       </h2>
 
-      <div className="space-y-6">
+      {/* MOBILE */}
+
+      <div className="hidden md:flex flex-col gap-6">
         {achievements.map((achievement, index) => (
           <AchievementCard
             key={index}
@@ -18,6 +22,43 @@ function Achievements() {
           />
         ))}
       </div>
+
+      {/* DESKTOP */}
+
+      <div
+  className="
+    md:hidden
+    flex
+    flex-nowrap
+    gap-5
+
+    overflow-x-auto
+    overflow-y-hidden
+
+    snap-x
+    snap-mandatory
+
+    scrollbar-hide
+    pb-4
+  "
+>
+  {achievements.map((achievement, index) => (
+
+    <div
+      key={index}
+      className="
+        min-w-[220px]
+        shrink-0
+        snap-center
+      "
+    >
+      <MobileAchievementCard
+        achievement={achievement}
+      />
+    </div>
+
+  ))}
+</div>
     </div>
   );
 }

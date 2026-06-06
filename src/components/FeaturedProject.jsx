@@ -36,7 +36,7 @@ function FeaturedProject({ project }) {
             className="
               w-full
               rounded-2xl
-              object-cover
+              object-contain
               shadow-2xl
               hover:scale-105
               transition-all
@@ -61,7 +61,7 @@ function FeaturedProject({ project }) {
 
           <div className="flex flex-wrap gap-3 mb-6">
 
-            {project.techStack.map((tech, index) => (
+            {project.techStack.slice(0,4).map((tech, index) => (
               <span
                 key={index}
                 className="
@@ -83,7 +83,7 @@ function FeaturedProject({ project }) {
 
           {/* DESCRIPTION */}
 
-          <p className="text-gray-400 leading-7 mb-6">
+          <p className="text-gray-400 leading-7 line-clamp-3 md:line-clamp-none mb-6">
             {project.overview}
           </p>
 
@@ -91,7 +91,7 @@ function FeaturedProject({ project }) {
 
           <div className="space-y-3 mb-8">
 
-            {project.features?.map((feature, index) => (
+            {project.features?.slice(0,3).map((feature, index) => (
 
               <div
                 key={index}
@@ -110,51 +110,49 @@ function FeaturedProject({ project }) {
 
           {/* BUTTONS */}
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex gap-5 mt-6">
 
             <a
-              href={project.live}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                flex
-                items-center
-                gap-2
-                px-6
-                py-3
-                rounded-xl
-                bg-gradient-to-r
-                from-blue-600
-                to-purple-600
-                hover:scale-105
-                transition
-              "
-            >
-              <FaExternalLinkAlt />
-              Live Demo
-            </a>
+  href={project.live}
+  target="_blank"
+  rel="noreferrer"
+  className="
+    flex
+    items-center
+    justify-center
+    gap-2
+    py-3
+    w-27
+    rounded-xl
+    bg-gradient-to-r
+    from-blue-600
+    to-purple-600
+  "
+>
+  <FaExternalLinkAlt />
+  Live Demo
+</a>
 
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                flex
-                items-center
-                gap-2
-                px-6
-                py-3
-                rounded-xl
-                border
-                border-white/10
-                bg-white/5
-                hover:bg-white/10
-                transition
-              "
-            >
-              <FaGithub />
-              GitHub
-            </a>
+<a
+  href={project.github}
+  target="_blank"
+  rel="noreferrer"
+  className="
+    flex
+    items-center
+    justify-center
+    gap-3
+    py-2
+    w-25
+    rounded-xl
+    border
+    border-white/10
+    bg-white/5
+  "
+>
+  <FaGithub />
+  GitHub
+</a>
 
           </div>
 

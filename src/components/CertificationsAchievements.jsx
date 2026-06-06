@@ -12,7 +12,8 @@ function CertificationsAchievements() {
 
       <div className="max-w-7xl mx-auto">
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10">
 
           <Certifications />
 

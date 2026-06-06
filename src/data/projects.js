@@ -72,8 +72,8 @@ const projects = [
     github: "https://github.com/Ankit4511/study-sync",
 
     live: "https://study-sync-cyan-three.vercel.app/",
-    homepage: true,
-  },
+featured: true  
+},
 
   {
     id: "portfolio",
@@ -142,7 +142,7 @@ const projects = [
     github: "https://github.com/Ankit4511/McLAREN-Responsive-landing-page",
 
     live: "#",
-    homepage: false,
+    homepage: true,
   },
 ];
 

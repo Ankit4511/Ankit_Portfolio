@@ -16,17 +16,19 @@ function About() {
 
       <div className="max-w-7xl mx-auto">
 
-        <SectionTitle
+        
+
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-20 items-start">
+
+          {/* LEFT SIDE */}
+          <div className="max-w-xl">
+
+            <SectionTitle
           title="About Me"
           subtitle="Introduction"
         />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-          {/* LEFT SIDE */}
-          <div className="max-w-2xl">
-
-            <p className="text-gray-400 leading-8 text-base md:text-lg">
+            <p className="text-gray-400 leading-9 text-lg mt-">
 
               Computer Engineering graduate with hands-on experience in React.js,
               JavaScript, Tailwind CSS, and .NET development.
@@ -51,96 +53,92 @@ function About() {
           </div>
 
           {/* RIGHT SIDE */}
-<div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 lg:-mt-25">
 
-  <div className="space-y-6">
 
-    <div className="flex items-center border-b border-white/10 pb-4">
-      <span className="text-purple-400 text-xl mr-4"><FaUser className="text-purple-400 text-lg mr-4" />
-</span>
 
-      <div className="w-32 text-gray-300 font-medium">
-        Name:
+    <div className="flex lg:justify-end">
+
+  <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 w-full max-w-md">
+
+    <div className="space-y-5">
+
+      <div className="border-b border-white/10 pb-4">
+      <div className="flex items-center gap-3 text-purple-400 mb-2">
+        <FaUser />
+        <span className="text-gray-300 font-medium">Name</span>
       </div>
-
-      <div className="text-gray-400">
+      <p className="text-gray-400 break-words">
         Ankitkumar Suthar
-      </div>
+      </p>
     </div>
 
-    <div className="flex items-center border-b border-white/10 pb-4">
-      <span className="text-purple-400 text-xl mr-4"><FaMapMarkerAlt className="text-purple-400 text-lg mr-4" />
-</span>
-
-      <div className="w-32 text-gray-300 font-medium">
-        Location:
+    <div className="border-b border-white/10 pb-4">
+      <div className="flex items-center gap-3 text-purple-400 mb-2">
+        <FaMapMarkerAlt />
+        <span className="text-gray-300 font-medium">Location</span>
       </div>
-
-      <div className="text-gray-400">
+      <p className="text-gray-400 break-words">
         Jaipur, Rajasthan, India
-      </div>
+      </p>
     </div>
 
-    <div className="flex items-center border-b border-white/10 pb-4">
-      <span className="text-purple-400 text-xl mr-4"><FaEnvelope className="text-purple-400 text-lg mr-4" />
-</span>
-
-      <div className="w-32 text-gray-300 font-medium">
-        Email:
+    <div className="border-b border-white/10 pb-4">
+      <div className="flex items-center gap-3 text-purple-400 mb-2">
+        <FaEnvelope />
+        <span className="text-gray-300 font-medium">Email</span>
       </div>
-
-      <div className="text-gray-400">
+      <p className="text-gray-400 break-all">
         anitsuthar683@gmail.com
-      </div>
+      </p>
     </div>
 
-    <div className="flex items-center border-b border-white/10 pb-4">
-      <span className="text-purple-400 text-xl mr-4"><FaPhoneAlt className="text-purple-400 text-lg mr-4" />
-</span>
-
-      <div className="w-32 text-gray-300 font-medium">
-        Phone:
+    <div className="border-b border-white/10 pb-4">
+      <div className="flex items-center gap-3 text-purple-400 mb-2">
+        <FaPhoneAlt />
+        <span className="text-gray-300 font-medium">Phone</span>
       </div>
-
-      <div className="text-gray-400">
-        +91 90495 94511 
-      </div>
+      <p className="text-gray-400">
+        +91 90495 94511
+      </p>
     </div>
 
-    <div className="flex items-center border-b border-white/10 pb-4">
-      <span className="text-purple-400 text-xl mr-4"><FaLinkedinIn className="text-purple-400 text-lg mr-4" />
-</span>
-
-      <div className="w-32 text-gray-300 font-medium">
-        LinkedIn:
+    <div className="border-b border-white/10 pb-4">
+      <div className="flex items-center gap-3 text-purple-400 mb-2">
+        <FaLinkedinIn />
+        <span className="text-gray-300 font-medium">LinkedIn</span>
       </div>
-
-      <div className="text-gray-400">
-https://www.linkedin.com/in/ankitkumar-suthar/      </div>
+      <p className="text-gray-400 break-all">
+        linkedin.com/in/ankitkumar-suthar
+      </p>
     </div>
 
-    <div className="flex items-center">
-      <span className="text-purple-400 text-xl mr-4"><FaGithub className="text-purple-400 text-lg mr-4" /></span>
-
-      <div className="w-32 text-gray-300 font-medium">
-        GitHub:
+    <div>
+      <div className="flex items-center gap-3 text-purple-400 mb-2">
+        <FaGithub />
+        <span className="text-gray-300 font-medium">GitHub</span>
       </div>
+      <p className="text-gray-400 break-all">
+        github.com/Ankit4511
+      </p>
+    </div>
 
-      <div className="text-gray-400">
-        https://github.com/Ankit4511
-      </div>
     </div>
 
   </div>
 
 </div>
 
-        </div>
+    
 
-      </div>
+  </div>
+
+</div>
+
+
+
 
       {/* Divider */}
-<div className="relative my-20">
+<div className="relative my-10">
   <div className="h-px w-full bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
 </div>
 

@@ -6,7 +6,7 @@ import Projects from "../components/Projects";
 import CertificationsAchievements from "../components/CertificationsAchievements";
 import GithubStats from "../components/GithubStats";
 import ContactSection from "../components/ContactSection";
-
+import MobileBottomNav from "../components/MobileBottomNav";
 
 
 function Home() {
@@ -21,6 +21,9 @@ function Home() {
       <CertificationsAchievements />
       <GithubStats />
       <ContactSection />
+      <div className="h-28 md:hidden"></div>
+
+      <MobileBottomNav />
         </>
     )
 }

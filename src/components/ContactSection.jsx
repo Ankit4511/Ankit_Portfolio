@@ -192,7 +192,25 @@ toast.error("Failed to send message!", {
 
             {/* Email */}
 
-            <div className="flex items-center gap-5 mb-8">
+            <a
+  href="mailto:ankitsuthar683@gmail.com"
+  className="
+  flex
+  items-center
+  gap-5
+  mb-4
+  p-4
+  rounded-2xl
+  bg-white/5
+  border
+  border-white/10
+  hover:border-purple-500/40
+  transition
+  lg:p-0
+  lg:bg-transparent
+  lg:border-none
+  "
+>
 
   <div
     className="
@@ -215,11 +233,27 @@ toast.error("Failed to send message!", {
     ankitsuthar683@gmail.com
   </p>
 
-</div>
+</a>
 
             {/* Phone */}
 
-            <div className="flex items-center gap-5 mb-8">
+            <a
+  href="tel:+919049594511"
+  className="
+  flex
+  items-center
+  gap-5
+  mb-4
+  p-4
+  rounded-2xl
+  bg-white/5
+  border
+  border-white/10
+  hover:border-purple-500/40
+  transition
+  lg:p-0
+  lg:bg-transparent
+  lg:border-none">
 
   <div
     className="
@@ -238,15 +272,31 @@ toast.error("Failed to send message!", {
     <FaPhoneAlt className="text-purple-400 text-2xl" />
   </div>
 
-  <p className="text-gray-300 text-xl">
+  <p className="text-gray-300 text-xl ">
     +91 90495 94511
   </p>
 
-</div>
+</a>
 
             {/* Location */}
 
-            <div className="flex items-center gap-5 mb-8">
+            <a
+  href="https://maps.google.com/?q=Jaipur,Rajasthan,India"
+  className="
+  flex
+  items-center
+  gap-5
+  mb-4
+  p-4
+  rounded-2xl
+  bg-white/5
+  border
+  border-white/10
+  hover:border-purple-500/40
+  transition
+  lg:p-0
+  lg:bg-transparent
+  lg:border-none">
 
   <div
     className="
@@ -269,7 +319,7 @@ toast.error("Failed to send message!", {
     Jaipur, Rajasthan, India
   </p>
 
-</div>
+</a>
 
             {/* Social Links */}
 
@@ -358,6 +408,8 @@ toast.error("Failed to send message!", {
 
           <div
             className="
+            hidden
+            lg:block
               lg:w-[60%]
               lg:-mt-20
               border

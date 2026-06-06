@@ -1,6 +1,6 @@
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
-function DonutChart({ languages }) {
+function DonutChart({ languages, mobile = false }) {
   const COLORS = [
     "#f97316", // orange
     "#8b5cf6", // purple
@@ -10,21 +10,29 @@ function DonutChart({ languages }) {
     "#eab308", // yellow
   ];
 
+  const size = mobile ? 70 : 180;
+
+  const innerRadius = mobile ? 18 : 50;
+
+  const outerRadius = mobile ? 28 : 75;
+
   return (
-    <div className="relative w-[180px] h-[180px] mb-8">
-      
-      <PieChart width={180} height={180}>
+    <div
+      className="relative"
+      style={{
+        width: size,
+        height: size,
+      }}
+    >
+      <PieChart width={size} height={size}>
         <Pie
           data={languages}
           dataKey="percentage"
-          innerRadius={50}
-          outerRadius={75}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
         >
           {languages.map((entry, index) => (
-            <Cell
-              key={index}
-              fill={COLORS[index % COLORS.length]}
-            />
+            <Cell key={index} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
 
@@ -44,15 +52,18 @@ function DonutChart({ languages }) {
         pointer-events-none
       "
       >
-        <span className="text-xl font-bold text-white">
-          {languages.length}
-        </span>
+        {!mobile && (
+  <>
+    <span className="text-xl font-bold text-white">
+      {languages.length}
+    </span>
 
-        <span className="text-[10px] text-gray-400">
-          Languages
-        </span>
+    <span className="text-[10px] text-gray-400">
+      Languages
+    </span>
+  </>
+)}
       </div>
-
     </div>
   );
 }

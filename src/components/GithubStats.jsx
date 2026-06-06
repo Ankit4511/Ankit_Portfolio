@@ -3,11 +3,14 @@ import TopLanguagesCard from "./TopLanguagesCard";
 import StreakCard from "./StreakCard";
 import ContributionGraphCard from "./ContributionGraphCard";
 import { FaGithub } from "react-icons/fa";
+import MobileGithubStats from "./MobileGithubStats";
+
+
 
 function GithubStats() {
   // console.log(githubStats);
   return (
-    <section className="px-6 md:px-10 ">
+    <section className="px-6 md:px-10 py-4">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-10">
   
@@ -28,10 +31,22 @@ function GithubStats() {
   <h2 className="text-4xl font-bold">
     GitHub Stats
   </h2>
+  
 
 </div>
 
-        <div className="grid md:grid-cols-[1fr_1.6fr_1.6fr] gap-6">
+<p className="text-gray-400 text-sm mt-2">
+  Activity, streaks and contribution insights
+</p>
+
+{/* Mobile */}
+
+<div className="md:hidden">
+  <MobileGithubStats />
+</div>
+
+{/* Desktop */}
+        <div className="hidden md:grid md:grid-cols-[1fr_1.6fr_1.6fr] gap-6">
 
   <StreakCard
     streak={githubStats.streak}

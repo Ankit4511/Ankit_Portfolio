@@ -1,22 +1,70 @@
 import certifications from "../data/certifications";
 import CertificationCard from "./CertificationCard";
+import MobileCertificationCard from "./MobileCertificationCard";
 import { LiaCertificateSolid } from "react-icons/lia";
 
 function Certifications() {
-  console.log(certifications);
   return (
-    <section className="px-6 md:px-10 py-1">
-      <h2 className="text-4xl font-bold mb-10 " >
+    <div>
+
+      <h2 className="text-4xl font-bold mb-10">
         <LiaCertificateSolid className="text-purple-400 text-4xl inline-block mr-2" />
         Certifications
       </h2>
 
-      <div className="space-y-6">
+      {/* DESKTOP */}
+
+      <div className="hidden md:flex flex-col gap-6">
+
         {certifications.map((certification, index) => (
-          <CertificationCard key={index} certification={certification} />
+
+          <CertificationCard
+            key={index}
+            certification={certification}
+          />
+
         ))}
+
       </div>
-    </section>
+
+      {/* MOBILE */}
+
+      <div
+  className="
+    md:hidden
+    flex
+    flex-nowrap
+    gap-5
+    overflow-x-auto
+    snap-x
+    snap-mandatory
+    scrollbar-hide
+    pb-4
+  "
+>
+
+        {certifications.map((certification, index) => (
+
+          <div
+            key={index}
+            className="
+              min-w-[170px]
+              snap-center
+              shrink-0
+            "
+          >
+
+            <MobileCertificationCard
+  certification={certification}
+/>
+
+          </div>
+
+        ))}
+
+      </div>
+
+    </div>
   );
 }
 

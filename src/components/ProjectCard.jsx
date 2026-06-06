@@ -21,19 +21,21 @@ function ProjectCard({ project }) {
     "
     >
 
-      <img
-        src={project.image}
-        alt={project.title}
-        className="
-          w-full
-          h-52
-          object-cover
-        "
-      />
+      <div className="aspect-[16/9] overflow-hidden rounded-2xl">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="
+      w-full
+      h-60
+      object-cover
+    "
+  />
+</div>
 
       <div className="p-5">
 
-        <h3 className="text-2xl font-bold mb-3">
+        <h3 className="text-2xl font-bold -mt-14 mb-4 text-white drop-shadow-lg">
           {project.title}
         </h3>
 
