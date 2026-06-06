@@ -62,9 +62,7 @@ function MobileBottomNav() {
       "
     >
       <div className="flex justify-around items-center h-full">
-
         {navItems.map((item, index) => (
-
           <a
             key={index}
             href={item.link}
@@ -81,18 +79,11 @@ function MobileBottomNav() {
             transition
             "
           >
-            <span className="text-lg">
-              {item.icon}
-            </span>
+            <span className="text-lg">{item.icon}</span>
 
-            <span className="text-[10px]">
-              {item.name}
-            </span>
-
+            <span className="text-[10px]">{item.name}</span>
           </a>
-
         ))}
-
       </div>
     </div>
   );
