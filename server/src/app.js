@@ -9,6 +9,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(healthRoutes);
 app.use(chatRoutes);
 

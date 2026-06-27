@@ -38,8 +38,7 @@ function ChatWindow({ closeChat }) {
 
   return (
     <div
-      className="
-    glass-message
+  className="
     fixed
     z-50
 
@@ -49,23 +48,29 @@ function ChatWindow({ closeChat }) {
 
     h-[85vh]
 
-    rounded-2xl
-    shadow-2xl
-    flex
-    flex-col
-    overflow-hidden
-
     md:left-auto
     md:right-6
     md:bottom-24
     md:w-[430px]
     md:h-[80vh]
+
+    flex
+    flex-col
+    overflow-hidden
+
+    rounded-3xl
+
+    border
+    border-white/10
+
+    bg-[#141824]
+
+    shadow-[0_25px_80px_rgba(0,0,0,0.55)]
   "
-    >
-      {/* Header */}
+>
       {/* Header */}
 
-<div
+      <div
   className="
     flex
     items-center
@@ -77,16 +82,15 @@ function ChatWindow({ closeChat }) {
     border-b
     border-white/10
 
-    bg-white/[0.03]
-    backdrop-blur-xl
+    bg-[#191d2b]
   "
->
-  {/* Left */}
 
-  <div className="flex items-center gap-3">
+      >
+        {/* Left */}
 
-    <div
-      className="
+        <div className="flex items-center gap-3">
+          <div
+            className="
         w-11
         h-11
 
@@ -102,73 +106,76 @@ function ChatWindow({ closeChat }) {
 
         shadow-lg
       "
-    >
-      <RiRobot2Fill className="text-white text-xl" />
-    </div>
+          >
+            <RiRobot2Fill className="text-white text-xl" />
+          </div>
 
-    <div>
+          <div>
+            <h2 className="font-semibold text-white">Portfolio AI</h2>
 
-      <h2 className="font-semibold text-white">
-        Portfolio AI
-      </h2>
+            <div className="flex items-center gap-2 mt-0.5">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
 
-      <div className="flex items-center gap-2 mt-0.5">
+              <span className="text-xs text-gray-400">Online</span>
+            </div>
+          </div>
+        </div>
 
-        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        {/* Right */}
 
-        <span className="text-xs text-gray-400">
-          Online
-        </span>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={handleClearChat}
+            disabled={messages.length === 0}
+            title="Clear Chat"
+            className="
+        p-2
 
+        rounded-lg
+
+        hover:bg-white/10
+
+        transition
+      "
+          >
+            <RiDeleteBinLine className="text-lg text-red-400" />
+          </button>
+
+          <button
+            onClick={closeChat}
+            title="Close"
+            className="
+        p-2
+
+        rounded-lg
+
+        hover:bg-white/10
+
+        transition
+      "
+          >
+            <IoClose className="text-xl" />
+          </button>
+        </div>
       </div>
 
-    </div>
-
-  </div>
-
-  {/* Right */}
-
-  <div className="flex items-center gap-2">
-
-    <button
-      onClick={handleClearChat}
-      disabled={messages.length === 0}
-      title="Clear Chat"
-      className="
-        p-2
-
-        rounded-lg
-
-        hover:bg-white/10
-
-        transition
-      "
-    >
-      <RiDeleteBinLine className="text-lg text-red-400" />
-    </button>
-
-    <button
-      onClick={closeChat}
-      title="Close"
-      className="
-        p-2
-
-        rounded-lg
-
-        hover:bg-white/10
-
-        transition
-      "
-    >
-      <IoClose className="text-xl" />
-    </button>
-
-  </div>
-
-</div>
-
       {/* Body */}
-      <div className="flex-1 overflow-y-auto px-4 md:px-5 py-4 pb-28 custom-scrollbar">
+      <div
+  className="
+    flex-1
+    overflow-y-auto
+
+    px-4
+    md:px-5
+
+    py-4
+    pb-28
+
+    bg-[#141824]
+
+    custom-scrollbar
+  "
+>
         {messages.length === 0 && showSuggestions && (
           <div className="flex flex-col items-center text-center">
             {/* AI Avatar */}
@@ -197,48 +204,49 @@ function ChatWindow({ closeChat }) {
             </h3>
 
             <div className="w-full">
-              <div className="grid grid-cols-2 gap-3 w-full">
-  {aiSuggestions.map((item) => (
-    <button
-      key={item.title}
-      disabled={loading}
-      onClick={() => handleSend(item.prompt)}
-      className="
-        flex
-        items-center
-        gap-3
+              <div className="grid grid-cols-2 gap-2 w-full">
+                {aiSuggestions.map((item) => (
+                  <button
+                    key={item.title}
+                    disabled={loading}
+                    onClick={() => handleSend(item.prompt)}
+                    className="
+flex
+flex-col
+items-center
+justify-center
 
-        rounded-xl
+gap-2
 
-        p-4
+h-24
 
-        bg-white/5
+rounded-xl
 
-        border
+bg-[#1b2030]
 
-        border-white/10
+border
 
-        hover:bg-white/10
+border-white/10
 
-        hover:border-blue-500/40
+hover:bg-[#23293c]
 
-        transition-all
+hover:border-blue-500/40
 
-        duration-300
+transition-all
 
-        active:scale-95
-      "
-    >
-      <span className="text-2xl">
-        {item.icon}
-      </span>
+duration-300
 
-      <span className="font-medium text-white text-sm md:text-base">
-        {item.title}
-      </span>
-    </button>
-  ))}
-</div>
+active:scale-95
+"
+                  >
+                    <span className="text-3xl">{item.icon}</span>
+
+                    <span className="text-sm font-medium text-white">
+                      {item.title}
+                    </span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}
