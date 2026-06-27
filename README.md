@@ -148,6 +148,142 @@ This portfolio is deployed on Vercel.
 npm run build
 ```
 
----
 
-### If you like this project, don't forget to ⭐ the repository.
+```
+portfolio
+├─ frontend
+│  ├─ eslint.config.js
+│  ├─ index.html
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ public
+│  │  ├─ favicon.svg
+│  │  ├─ icons.svg
+│  │  └─ resume
+│  │     └─ ankit_cv.pdf
+│  ├─ src
+│  │  ├─ AI
+│  │  │  ├─ components
+│  │  │  │  ├─ AIButton.jsx
+│  │  │  │  ├─ ChatInput.jsx
+│  │  │  │  ├─ ChatMessage.jsx
+│  │  │  │  ├─ ChatWindow.jsx
+│  │  │  │  ├─ CopyButton.jsx
+│  │  │  │  ├─ ThinkingIndicator.jsx
+│  │  │  │  └─ TypingAnimation.jsx
+│  │  │  ├─ core
+│  │  │  │  ├─ buildPrompt.js
+│  │  │  │  ├─ memory.js
+│  │  │  │  ├─ promptTemplate.js
+│  │  │  │  └─ router.js
+│  │  │  └─ markdown
+│  │  │     └─ markdownComponents.jsx
+│  │  ├─ App.css
+│  │  ├─ App.jsx
+│  │  ├─ assets
+│  │  │  ├─ hero.png
+│  │  │  ├─ leetMetric.png
+│  │  │  ├─ McLaren.jpg
+│  │  │  ├─ my.jpg
+│  │  │  ├─ portfolio.png
+│  │  │  ├─ react.svg
+│  │  │  ├─ study-sync.png
+│  │  │  └─ vite.svg
+│  │  ├─ components
+│  │  │  ├─ About.jsx
+│  │  │  ├─ AchievementCard.jsx
+│  │  │  ├─ Achievements.jsx
+│  │  │  ├─ CertificationCard.jsx
+│  │  │  ├─ Certifications.jsx
+│  │  │  ├─ CertificationsAchievements.jsx
+│  │  │  ├─ ContactSection.jsx
+│  │  │  ├─ ContributionGraphCard.jsx
+│  │  │  ├─ DonutChart.jsx
+│  │  │  ├─ Experience.jsx
+│  │  │  ├─ FeaturedProject.jsx
+│  │  │  ├─ GithubStats.jsx
+│  │  │  ├─ Hero.jsx
+│  │  │  ├─ LanguageCard.jsx
+│  │  │  ├─ MobileAchievementCard.jsx
+│  │  │  ├─ MobileBottomNav.jsx
+│  │  │  ├─ MobileCertificationCard.jsx
+│  │  │  ├─ MobileContributionGraph.jsx
+│  │  │  ├─ MobileGithubStats.jsx
+│  │  │  ├─ MobileProjectCard.jsx
+│  │  │  ├─ MobileStreakCard.jsx
+│  │  │  ├─ MobileTopLanguages.jsx
+│  │  │  ├─ Navbar.jsx
+│  │  │  ├─ ProjectCard.jsx
+│  │  │  ├─ Projects.jsx
+│  │  │  ├─ SectionTitle.jsx
+│  │  │  ├─ SkillCard.jsx
+│  │  │  ├─ Skills.jsx
+│  │  │  ├─ StatsCard.jsx
+│  │  │  ├─ StreakCard.jsx
+│  │  │  └─ TopLanguagesCard.jsx
+│  │  ├─ constants
+│  │  │  └─ config.js
+│  │  ├─ context
+│  │  │  ├─ ChatContext.jsx
+│  │  │  └─ useChatContext.js
+│  │  ├─ data
+│  │  │  ├─ about.js
+│  │  │  ├─ achievements.js
+│  │  │  ├─ aiSuggestions.js
+│  │  │  ├─ certifications.js
+│  │  │  ├─ contact.js
+│  │  │  ├─ contributions.js
+│  │  │  ├─ education.js
+│  │  │  ├─ experience.js
+│  │  │  ├─ githubStats.js
+│  │  │  ├─ portfolioContext.js
+│  │  │  ├─ projects.js
+│  │  │  ├─ skills.js
+│  │  │  └─ social.js
+│  │  ├─ hooks
+│  │  │  └─ useChat.js
+│  │  ├─ index.css
+│  │  ├─ main.jsx
+│  │  ├─ pages
+│  │  │  ├─ Home.jsx
+│  │  │  ├─ ProjectDetails.jsx
+│  │  │  └─ ProjectsPage.jsx
+│  │  ├─ services
+│  │  │  ├─ aiService.js
+│  │  │  ├─ api.js
+│  │  │  └─ githubService.js
+│  │  └─ utils
+│  │     ├─ formatter.js
+│  │     └─ helpers.js
+│  └─ vite.config.js
+├─ README.md
+└─ server
+   ├─ package-lock.json
+   ├─ package.json
+   └─ src
+      ├─ AI
+      │  └─ core
+      │     ├─ buildPrompt.js
+      │     ├─ memory.js
+      │     ├─ promptTemplate.js
+      │     └─ router.js
+      ├─ app.js
+      ├─ config
+      │  └─ cors.js
+      ├─ controllers
+      │  └─ chat.controller.js
+      ├─ data
+      │  └─ portfolioContext.js
+      ├─ middlewares
+      ├─ routes
+      │  ├─ chat.routes.js
+      │  └─ health.routes.js
+      ├─ server.js
+      ├─ services
+      │  ├─ ai.service.js
+      │  ├─ gemini.js
+      │  └─ groq.js
+      └─ utils
+         └─ helpers.js
+
+```
