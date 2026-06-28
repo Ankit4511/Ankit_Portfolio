@@ -107,3 +107,11 @@ html {
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.3) transparent;
 }
+
+
+/* Desktop pe native cursor hide — custom cursor dikhega */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
