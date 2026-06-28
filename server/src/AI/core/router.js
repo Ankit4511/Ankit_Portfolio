@@ -17,14 +17,22 @@ export function getContext(question) {
   let matchedProject = null;
 
   for (const project of portfolioContext.projects) {
-    const title = normalizeText(project.title);
 
-    if (normalizedQuestion.includes(title)) {
-      matchedProject = project;
-      saveLastProject(project);
-      break;
+    const keywords = [
+        normalizeText(project.title),
+        ...(project.aliases || []).map(normalizeText)
+    ];
+
+    const found = keywords.some(keyword =>
+        normalizedQuestion.includes(keyword)
+    );
+
+    if (found) {
+        matchedProject = project;
+        saveLastProject(project);
+        break;
     }
-  }
+}
 
   if (isProjectFollowUp && lastProject) {
     return lastProject;
