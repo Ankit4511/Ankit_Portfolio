@@ -149,6 +149,7 @@ npm run build
 ```
 
 
+
 ```
 portfolio
 ├─ frontend
@@ -171,11 +172,6 @@ portfolio
 │  │  │  │  ├─ CopyButton.jsx
 │  │  │  │  ├─ ThinkingIndicator.jsx
 │  │  │  │  └─ TypingAnimation.jsx
-│  │  │  ├─ core
-│  │  │  │  ├─ buildPrompt.js
-│  │  │  │  ├─ memory.js
-│  │  │  │  ├─ promptTemplate.js
-│  │  │  │  └─ router.js
 │  │  │  └─ markdown
 │  │  │     └─ markdownComponents.jsx
 │  │  ├─ App.css
@@ -280,8 +276,7 @@ portfolio
       │  └─ health.routes.js
       ├─ server.js
       ├─ services
-      │  ├─ ai.service.js
-      │  ├─ gemini.js
+      │  ├─ chat.service.js
       │  └─ groq.js
       └─ utils
          └─ helpers.js

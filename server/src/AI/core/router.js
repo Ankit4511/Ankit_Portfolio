@@ -3,6 +3,9 @@ import { getLastProject, saveLastProject } from "./memory.js";
 import { normalizeText } from "../../utils/helpers.js";
 
 export function getContext(question) {
+
+
+
   const normalizedQuestion = normalizeText(question);
 
   const lastProject = getLastProject();
@@ -28,19 +31,32 @@ export function getContext(question) {
     );
 
     if (found) {
-        matchedProject = project;
-        saveLastProject(project);
-        break;
-    }
-}
+    console.log("Matched Project:", project.title);
 
-  if (isProjectFollowUp && lastProject) {
-    return lastProject;
-  }
+    matchedProject = project;
+
+    saveLastProject(project);
+
+    break;
+}
+}
+console.log("Final Context:", matchedProject);
+
+  // if (isProjectFollowUp && lastProject) {
+  //   return lastProject;
+  // }
+
+  // if (matchedProject) {
+  //   return matchedProject;
+  // }
 
   if (matchedProject) {
-    return matchedProject;
-  }
+  return matchedProject;        // direct match pehle check ho
+}
+
+if (isProjectFollowUp && lastProject) {
+  return lastProject;           // memory fallback baad me
+}
 
   if (
     normalizedQuestion.includes("project") ||

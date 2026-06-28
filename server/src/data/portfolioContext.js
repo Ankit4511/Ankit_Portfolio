@@ -75,6 +75,12 @@ projects: [
   {
     title: "StudySync",
 
+    aliases: [
+    "studysync",
+    "study sync",
+    "study-sync"
+  ],
+
     type: "Academic",
 
     year: 2025,
@@ -120,6 +126,14 @@ projects: [
   {
   title: "LeetMetric App",
 
+   aliases: [
+    "leetmetric",
+    "leet metric",
+    "leetcode",
+    "leetcode app",
+    "leetmetric app"
+  ],
+
   type: "Personal",
 
   year: 2025,
@@ -158,6 +172,13 @@ projects: [
 },
 {
   title: "Personal Portfolio",
+
+  aliases: [
+    "portfolio",
+    "personal portfolio",
+    "ai portfolio",
+    "portfolio website"
+  ],
 
   type: "Personal",
 
@@ -201,6 +222,14 @@ projects: [
 },
 {
   title: "McLaren Landing Page",
+
+  aliases: [
+    "mclaren",
+    "landing page",
+    "car landing page",
+    "mclaren landing page",
+    "car website"
+  ],
 
   type: "Personal",
 
