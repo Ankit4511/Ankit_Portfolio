@@ -1,8 +1,16 @@
+
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 export async function askGroq(prompt) {
-  if (!process.env.GROQ_API_KEY) {
+  const apiKey = process.env.GROQ_API_KEY;
+  const model = process.env.GROQ_MODEL;
+
+  if (!apiKey) {
     throw new Error("GROQ_API_KEY is missing in .env");
+  }
+
+  if (!model) {
+    throw new Error("GROQ_MODEL is missing in .env");
   }
 
   const response = await fetch(API_URL, {
@@ -10,11 +18,11 @@ export async function askGroq(prompt) {
 
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+      Authorization: `Bearer ${apiKey}`,
     },
 
     body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
+      model,
 
       messages: [
         {
@@ -31,8 +39,11 @@ export async function askGroq(prompt) {
   const data = await response.json().catch(() => ({}));
 
   if (!response.ok) {
-    console.error(data);
-    throw new Error(data?.error?.message || "Groq API Error");
+    console.error("Groq API Error:", data);
+
+    throw new Error(
+      data?.error?.message || "Groq API request failed"
+    );
   }
 
   return (

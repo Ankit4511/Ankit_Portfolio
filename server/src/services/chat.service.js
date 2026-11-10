@@ -2,7 +2,7 @@ import buildPrompt from "../AI/core/buildPrompt.js";
 import { askGroq } from "./groq.js";
 
 export async function askPortfolioAI(question) {
-  if (!question?.trim()) {
+  if (typeof question !== "string" || !question.trim()) {
     return "Please enter a question.";
   }
 
