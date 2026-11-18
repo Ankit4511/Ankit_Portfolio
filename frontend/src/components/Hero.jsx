@@ -7,8 +7,6 @@ import about from "../data/about";
 import social from "../data/social";
 import contact from "../data/contact";
 
-
-
 const Dots = () => (
   <div className="grid grid-cols-3 gap-3">
     {[...Array(9)].map((_, i) => (
@@ -28,7 +26,7 @@ function Hero() {
     >
       {/* Background Glow */}
       <div
-  className="
+        className="
     absolute
 
     top-24
@@ -48,7 +46,7 @@ function Hero() {
     blur-3xl
     pointer-events-none
   "
-></div>
+      ></div>
 
       <div className="max-w-7xl w-full">
         {/* LEFT SIDE */}
@@ -84,9 +82,7 @@ lg:text-8xl
               >
                 {about.firstName}
                 <br />
-                <span className="text-white">
-                  {about.lastName}
-                </span>
+                <span className="text-white">{about.lastName}</span>
               </h1>
 
               <h2
@@ -117,29 +113,29 @@ lg:text-8xl
                   "
               >
                 <>
-  {/* Frontend Developer |
+                  {/* Frontend Developer |
   <br className="md:hidden" />
 
   {" "}Web Developer |
   <br className="md:hidden" />
 
   {" "}Ex Intern @ We3.Tech Works */}
-  {about.roles.map((role,index) => (
-    <span key={index}>
-      {role}
-      {index !== about.roles.length -1 && (
-        <>
-        {" | "}
-        <br className="md:hidden" />
-        </>
-      )}
-    </span>
-  ))}
-</>
+                  {about.roles.map((role, index) => (
+                    <span key={index}>
+                      {role}
+                      {index !== about.roles.length - 1 && (
+                        <>
+                          {" | "}
+                          <br className="md:hidden" />
+                        </>
+                      )}
+                    </span>
+                  ))}
+                </>
               </h2>
 
               <div
-  className="
+                className="
     inline-flex
     items-center
     gap-5
@@ -159,13 +155,12 @@ lg:text-8xl
 
     shadow-[0_0_25px_rgba(34,211,238,0.15)]
   "
->
-  {/* Green Dot */}
+              >
+                {/* Green Dot */}
 
-  <span className="relative flex h-3 w-3">
-
-    <span
-      className="
+                <span className="relative flex h-3 w-3">
+                  <span
+                    className="
       absolute
       inline-flex
       h-full
@@ -175,10 +170,10 @@ lg:text-8xl
       opacity-50
       animate-ping
       "
-    />
+                  />
 
-    <span
-      className="
+                  <span
+                    className="
       relative
       inline-flex
       rounded-full
@@ -186,20 +181,19 @@ lg:text-8xl
       w-3
       bg-green-400
       "
-    />
+                  />
+                </span>
 
-  </span>
-
-  <span
-    className="
+                <span
+                  className="
     text-gray-200
     text-sm md:text-base
     font-medium
     "
-  >
-{about.availability}
-  </span>
-</div>
+                >
+                  {about.availability}
+                </span>
+              </div>
             </div>
 
             {/* IMAGE */}
@@ -265,7 +259,7 @@ lg:text-8xl
               </div>
 
               <div
-  className="
+                className="
   relative
   p-[3px]
   rounded-full
@@ -274,9 +268,9 @@ lg:text-8xl
   via-indigo-500
   to-purple-500
   "
->
-  <div
-    className="
+              >
+                <div
+                  className="
     w-[170px]
     h-[170px]
     sm:w-[180px]
@@ -286,18 +280,18 @@ lg:text-8xl
     rounded-full
     overflow-hidden
     "
-  >
-    <img
-      src={myImage}
-      alt="Profile"
-      className="w-full h-full object-cover object-[center_20%]"
-    />
-  </div>
+                >
+                  <img
+                    src={myImage}
+                    alt="Profile"
+                    className="w-full h-full object-cover object-[center_20%]"
+                  />
+                </div>
 
-  {/* Online Indicator */}
+                {/* Online Indicator */}
 
-  <div
-    className="
+                <div
+                  className="
     absolute
 
     bottom-2
@@ -325,8 +319,8 @@ lg:text-8xl
 
     z-50
     "
-  />
-</div>
+                />
+              </div>
 
               {/* Right Dots */}
               <div className="hidden md:block absolute -right-16 top-1/2 -translate-y-1/2">
@@ -388,19 +382,20 @@ sm:w-fit
             </a>
 
             <a
-              href={about.resume}
-              download="Ankit_Suthar_about.resume.pdf"
+              href="/resume/ankit_cv.pdf"
               className="
-              px-6
-              py-3
-              rounded-xl
-              text-center
-              bg-gradient-to-r
-              from-indigo-500
-              to-purple-600
-              "
+    px-6
+    py-3
+    rounded-xl
+    text-center
+    bg-gradient-to-r
+    from-indigo-500
+    to-purple-600
+    hover:opacity-90
+    transition
+  "
             >
-              ⬇️ Download Resume 
+              👁️ View Resume
             </a>
           </div>
 
@@ -422,7 +417,9 @@ sm:w-fit
                 <h3 className="text-3xl md:text-4xl font-bold">2+</h3>
               </div>
 
-              <p className="text-gray-400 text-sm md:text-lg mt-1">Internships</p>
+              <p className="text-gray-400 text-sm md:text-lg mt-1">
+                Internships
+              </p>
             </div>
 
             {/* Projects */}
