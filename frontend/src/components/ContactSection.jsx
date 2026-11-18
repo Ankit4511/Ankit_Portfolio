@@ -4,77 +4,75 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
-import {useState} from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { Bounce } from "react-toastify";
 
 function ContactSection() {
-
-  const [formData , setFormData] = useState({
-    from_name:"",
-    from_email:"",
+  const [formData, setFormData] = useState({
+    from_name: "",
+    from_email: "",
     message: "",
   });
 
-  const handleChange= (e) => {
+  const handleChange = (e) => {
     setFormData({
-      ...formData,[e.target.name]:e.target.value,
-    })
-  }
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const sendEmail = async (e) => {
     e.preventDefault();
     // console.log(formData)
 
-    try{
+    try {
       const result = await emailjs.send(
         "service_atwszqa",
         "template_rqc8ssx",
         formData,
-        "5RP0rJpShB9Wmiyta"
-      )
+        "5RP0rJpShB9Wmiyta",
+      );
       console.log(result);
-toast.success("Message sent successfully!", {
-  position: "top-center",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "dark",
-transition: Bounce,
-});
-      setFormData({
-        from_name:"",
-        from_email:"",
-        message:"",
+      toast.success("Message sent successfully!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
       });
-    
-  } catch(error) {
-    console.log(error);
+      setFormData({
+        from_name: "",
+        from_email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
 
-toast.error("Failed to send message!", {
-  position: "top-right",
-  autoClose: 3000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  theme: "dark",
-  transition: Bounce,
-});  }
-  
-    };
-    
+      toast.error("Failed to send message!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
+  };
+
   return (
     <section id="contact" className="relative ">
-
-<div className="relative max-w-7xl mx-auto px-6 z-10">
+      <div className="relative max-w-7xl mx-auto px-6 z-10">
         {/* Purple Glow */}
 
-<div
-  className="
+        <div
+          className="
     absolute
     top-1/2
     right-0
@@ -91,12 +89,11 @@ toast.error("Failed to send message!", {
 
     pointer-events-none
   "
-/>
+        />
 
         {/* Header */}
 
         <div>
-
           {/* Status Badge */}
 
           <div
@@ -124,7 +121,6 @@ toast.error("Failed to send message!", {
                 bg-green-400
               "
             />
-
             Available for Work
           </div>
 
@@ -138,10 +134,7 @@ toast.error("Failed to send message!", {
               leading-tight
             "
           >
-            <span className="text-white">
-              Let's
-            </span>{" "}
-
+            <span className="text-white">Let's</span>{" "}
             <span
               className="
                 bg-gradient-to-r
@@ -167,10 +160,9 @@ toast.error("Failed to send message!", {
               max-w-xl
             "
           >
-            I'm currently open to new opportunities.
-            Let's build something great together!
+            I'm currently open to new opportunities. Let's build something great
+            together!
           </p>
-
         </div>
 
         {/* Main Contact Area */}
@@ -185,16 +177,14 @@ toast.error("Failed to send message!", {
             items-start
           "
         >
-
           {/* Left Side */}
 
           <div className="lg:w-2/5">
-
             {/* Email */}
 
             <a
-  href="mailto:ankitsuthar683@gmail.com"
-  className="
+              href="mailto:ankitsuthar683@gmail.com"
+              className="
   flex
   items-center
   gap-5
@@ -210,10 +200,9 @@ toast.error("Failed to send message!", {
   lg:bg-transparent
   lg:border-none
   "
->
-
-  <div
-    className="
+            >
+              <div
+                className="
       w-14
       h-14
       rounded-2xl
@@ -225,21 +214,18 @@ toast.error("Failed to send message!", {
       border-purple-500/20
       shrink-0
     "
-  >
-    <MdEmail className="text-purple-400 text-2xl" />
-  </div>
+              >
+                <MdEmail className="text-purple-400 text-2xl" />
+              </div>
 
-  <p className="text-gray-300 text-xl">
-    ankitsuthar683@gmail.com
-  </p>
-
-</a>
+              <p className="text-gray-300 text-xl">ankitsuthar683@gmail.com</p>
+            </a>
 
             {/* Phone */}
 
             <a
-  href="tel:+919049594511"
-  className="
+              href="tel:+919049594511"
+              className="
   flex
   items-center
   gap-5
@@ -253,10 +239,10 @@ toast.error("Failed to send message!", {
   transition
   lg:p-0
   lg:bg-transparent
-  lg:border-none">
-
-  <div
-    className="
+  lg:border-none"
+            >
+              <div
+                className="
       w-14
       h-14
       rounded-2xl
@@ -268,21 +254,18 @@ toast.error("Failed to send message!", {
       border-purple-500/20
       shrink-0
     "
-  >
-    <FaPhoneAlt className="text-purple-400 text-2xl" />
-  </div>
+              >
+                <FaPhoneAlt className="text-purple-400 text-2xl" />
+              </div>
 
-  <p className="text-gray-300 text-xl ">
-    +91 90495 94511
-  </p>
-
-</a>
+              <p className="text-gray-300 text-xl ">+91 90495 94511</p>
+            </a>
 
             {/* Location */}
 
             <a
-  href="https://maps.google.com/?q=Jaipur,Rajasthan,India"
-  className="
+              href="https://maps.google.com/?q=Jaipur,Rajasthan,India"
+              className="
   flex
   items-center
   gap-5
@@ -296,10 +279,10 @@ toast.error("Failed to send message!", {
   transition
   lg:p-0
   lg:bg-transparent
-  lg:border-none">
-
-  <div
-    className="
+  lg:border-none"
+            >
+              <div
+                className="
       w-14
       h-14
       rounded-2xl
@@ -311,20 +294,18 @@ toast.error("Failed to send message!", {
       border-purple-500/20
       shrink-0
     "
-  >
-    <FaLocationDot className="text-purple-400 text-2xl" />
-  </div>
+              >
+                <FaLocationDot className="text-purple-400 text-2xl" />
+              </div>
 
-  <p className="text-gray-300 text-xl">
-    Jaipur, Rajasthan, India
-  </p>
-
-</a>
+              <p className="text-gray-300 text-xl">
+                Mumbai, Maharashtra, India
+              </p>
+            </a>
 
             {/* Social Links */}
 
             <div className="flex gap-5 mt-12">
-
               <a
                 href="#"
                 className="
@@ -372,13 +353,11 @@ toast.error("Failed to send message!", {
               >
                 <FaGithub className="text-3xl text-white" />
               </a>
-
             </div>
 
             {/* Footer Text */}
 
             <div className="mt-12">
-
               <p
                 className="
                   text-gray-400
@@ -388,23 +367,13 @@ toast.error("Failed to send message!", {
                 "
               >
                 Always excited to work on{" "}
-                <span className="text-purple-400">
-                  meaningful
-                </span>{" "}
-                and{" "}
-                <span className="text-purple-400">
-                  impactful
-                </span>{" "}
-                projects.
+                <span className="text-purple-400">meaningful</span> and{" "}
+                <span className="text-purple-400">impactful</span> projects.
               </p>
-
             </div>
-
           </div>
 
           {/* Right Side */}
-
-          
 
           <div
             className="
@@ -422,25 +391,20 @@ toast.error("Failed to send message!", {
               shadow-purple-500/10
             "
           >
-
             <div className="flex items-center gap-4 mb-3">
-            <div className="w-16 h-16 riunded-full bg-purple-500/10 flex items-center justify-center">
-            <FiSend className="text-purple-400 text-3xl" />
+              <div className="w-16 h-16 riunded-full bg-purple-500/10 flex items-center justify-center">
+                <FiSend className="text-purple-400 text-3xl" />
+              </div>
+
+              <h3 className="text-4xl font-bold text-white">
+                Send Me a Message
+              </h3>
             </div>
 
-            <h3 className="text-4xl font-bold text-white">
-              Send Me a Message
-            </h3>
-          </div>
-
-            <form 
-            onSubmit={sendEmail}
-            className="flex flex-col gap-5">
-
+            <form onSubmit={sendEmail} className="flex flex-col gap-5">
               {/* Inputs Row */}
 
               <div className="flex flex-col md:flex-row gap-4">
-
                 <input
                   type="text"
                   name="from_name"
@@ -490,7 +454,6 @@ toast.error("Failed to send message!", {
                     duration-300
                   "
                 />
-
               </div>
 
               {/* Message */}
@@ -523,7 +486,7 @@ toast.error("Failed to send message!", {
               {/* Button */}
 
               <button
-              type="submit"
+                type="submit"
                 className="
                   w-full
                   py-4
@@ -543,19 +506,14 @@ toast.error("Failed to send message!", {
                 "
               >
                 <span className="flex items-center justify-center gap-3">
-                Send Message
-<FiSend />
+                  Send Message
+                  <FiSend />
                 </span>
               </button>
-
             </form>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
